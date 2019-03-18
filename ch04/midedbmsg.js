@@ -21,9 +21,9 @@ var imageLog = new function() {
 };
 
 var mdb = mysql.createPool({
-    host : '127.0.0.1',
-    user : 'master',
-    password : 'master2018',
+    host : 'localhost',
+    user : 'root',
+    password : 'ddd',
     database : 'wxtest',
     connectionLimit : 10
 });
@@ -252,7 +252,7 @@ ant.add(async (rr, next) => {
         imageLog.list.push(rr.weixinMsg.wxmsg.MediaId);
     }
     await next(rr);
-}, '/wx/talk');
+}, '/wx');
 
 ant.add(async (rr, next) => {
     
@@ -288,9 +288,9 @@ ant.add(async (rr, next) => {
 
     await next(rr);
 
-}, '/wx/talk');
+}, '/wx');
 
-ant.post('/wx/talk', async rr => {
+ant.post('/wx', async rr => {
     
     console.log(rr.req.GetBody());
     
@@ -305,5 +305,5 @@ ant.post('/wx/talk', async rr => {
 
 });
 
-ant.run('localhost', 8192);
+ant.run('0.0.0.0', 80);
 

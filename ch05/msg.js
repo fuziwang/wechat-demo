@@ -26,6 +26,11 @@ var menu_data = {
 					key: "rselfmenu_2_0"
 				}
 			]
+		},
+		{
+			name:"关于我们",
+			type:"click",
+			key:"about-us"
 		}
 	]
 }

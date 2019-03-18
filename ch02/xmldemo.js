@@ -7,7 +7,7 @@ var xmltext = `
 		<message><![CDATA[<p>content</p>if(a<b){console.log(a);}]]></message>
 	</xml>
 `
-xmlparse(xmltext,{explicitArray:false},(err,result)=>{
+xmlparse(xmltext,{explicitArray:true},(err,result)=>{
 	if(err){
 		console.log(err);
 	} else {
