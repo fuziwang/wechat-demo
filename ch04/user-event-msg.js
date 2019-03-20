@@ -175,7 +175,7 @@ function help() {
 }
 
 
-ant.post('/wx', async (rr) => {
+ant.post('/wx/talk', async (rr) => {
     //输出收到的消息用于观察测试
     console.log(rr.req.GetBody());
 
@@ -206,4 +206,4 @@ ant.post('/wx', async (rr) => {
 
 });
 
-ant.run('0.0.0.0', 80);
+ant.run('localhost', 8192);
