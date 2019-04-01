@@ -41,6 +41,11 @@ var menu_data = {
                     type : "click",
                     key  : "about-us"
                 },
+								{
+										name:"wxoauth",
+										type:"view",
+										url:"http://fuziwang.bbh056.top/wx/oauth/code"
+								}
 
             ]
         }
